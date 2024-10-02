@@ -1,8 +1,22 @@
 #bubble(list) - > sorted ist
+def bubble (lis):
+    length = len(lis)
+    while length > 0:
+        itterations =0
+        x = 0
+        while x < length:
+            if lis[x] > lis[x+1]:
+                nw = lis[x]
+                lis[x] = lis[x+1]
+                lis[x+1] = nw
+            x+=1
+            itterations +=1
+        length-=1
+    print(x)
+    return lis
 
 
 #selection(list) -> sorted list
-
 def selection (lis):
     length = len(lis)
     runs = 0
@@ -24,9 +38,9 @@ def selection (lis):
             lis[runs] = temp
         runs += 1
     return lis
-  
-#insertion(list) > sorted list
 
+
+#insertion(list) > sorted list
 def insertion(lis):
     
     length = len(lis)
