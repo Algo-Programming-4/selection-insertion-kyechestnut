@@ -26,3 +26,22 @@ def selection (lis):
     return lis
   
 #insertion(list) > sorted list
+
+def insertion(lis):
+    
+    length = len(lis)
+    cur = 1
+    temp =0
+    
+    while cur < length:
+        t = cur
+        while lis[t] < lis[t-1]:
+            temp = lis[t]
+            lis [t] = lis[t-1]
+            lis[t-1] = temp
+            if t>1:
+                t -=1
+        cur +=1
+
+    return lis
+
